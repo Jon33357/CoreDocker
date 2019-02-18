@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  coredockerexp:
+    image: ${DOCKER_REGISTRY-}coredockerexp
+    ports:
+      - "5000:80"
+    build:
+      context: .
+      dockerfile: CoreDockerExp/Dockerfile
